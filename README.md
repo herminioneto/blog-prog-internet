@@ -30,9 +30,9 @@ python manage.py runserver
 # O servidor abrirá executando na porta 8000
 ```
 
-
 ## Ferramentas utilizadas:
 * Python, JS, HTML e CSS
+* SQLite
 * Django Framework
 
 ## Autores
