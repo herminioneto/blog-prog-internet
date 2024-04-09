@@ -17,8 +17,15 @@ header {
     margin-bottom: 50px;
 }
 
+main {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    color: white;
+}
+
 .page-title {
-    font-family: "Foldit";
+    font-family: "Inter";
     text-align: center;
     margin: 20px;
     padding: 10px;
@@ -38,7 +45,31 @@ header {
     margin-bottom: 20px;
 }
 
+.post-time {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
 .post-author {
     font-size: 1rem;
     margin-bottom: 10px;
+}
+
+.post-details-card {
+    display: flex;
+    align-items: left;
+    justify-content: top;
+    flex-direction: column;
+    height: 80%;
+
+    margin: 60px;
+    padding: 20px;
+    color: white;
+    background-color: rgba(134, 121, 217, 0.2);
+    border-radius: 10px;
+
+}
+
+.post-details-time{
+    align-self: center;
+
 }
