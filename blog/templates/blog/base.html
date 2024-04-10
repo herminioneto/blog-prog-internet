@@ -12,22 +12,14 @@
       <h1 class="page-title">GameLog</h1>
       <nav id="nav-main-page">
         <div class="nav-item">
-          <a href="{% url "create_post" %}">Criar Post</a>
+          <a href="{% url "main_page" %}">Página Principal</a>
         </div>
         <div class="nav-item">
-          <a href="#">Teste</a>
-        </div>
-        <div class="nav-item">
-          <a href="#">Teste</a>
-        </div>
-        <div class="nav-item">
-          <a href="#">Teste</a>
-        </div>
-        <div class="nav-item">
-          <a href="#">Teste</a>
+          <a href=" {% url "create_post" %}">Criar Post</a>
         </div>
       </nav>
     </header>
+    <script src="{% static "blog/scripts/stikyNavBar.js" %}"></script>
     {% block content %}
     {% endblock content %}
   </body>

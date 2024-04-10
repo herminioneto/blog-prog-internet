@@ -1,8 +1,7 @@
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
-  <header>
-    <h1 class="page-title">{{ post.title }}</h1>
-  </header>
+  <h1 class="post-details-title">{{ post.title }}</h1>
   <main>
     <article class="post-details-card">
       <h3 class="post-details-time">Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}</h3>
