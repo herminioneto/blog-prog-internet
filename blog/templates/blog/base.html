@@ -10,15 +10,20 @@
   <body>
     <header>
       <h1 class="page-title">GameLog</h1>
-      <nav id="nav-main-page">
-        <div class="nav-item">
-          <a href="{% url "main_page" %}">Página Principal</a>
-        </div>
-        <div class="nav-item">
-          <a href=" {% url "create_post" %}">Criar Post</a>
-        </div>
-      </nav>
-    </header>
+      <div class="container-nav">
+        <nav id="nav-main-page">
+          <div class="nav-item">
+            <a href="{% url "main_page" %}">Página Principal</a>
+          </div>
+          <div class="nav-item">
+            <a href=" {% url "create_post" %}">Criar Post</a>
+          </div>
+          <div class="nav-item">
+            <a href="https://pagina-fera.vercel.app">Sobre</a>
+          </div>
+        </nav>
+      </header>
+    </div>
     <script src="{% static "blog/scripts/stikyNavBar.js" %}"></script>
     {% block content %}
     {% endblock content %}
