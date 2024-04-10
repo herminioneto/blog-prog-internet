@@ -7,34 +7,38 @@
     box-sizing: border-box;
 }
 
+header {
+    height: 200px;
+}
+
 body {
     font-family: "Inter";
     height: 100vh;
     background: linear-gradient(180deg, rgba(14,14,66,1) 29%, rgba(55,24,113,1) 66%);
 }
 
-header {
-    margin-bottom: 50px;
-}
-
 main {
-    margin: auto;
-    width: 80%;
-    text-align: center;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 30px);
+    gap: 10px;
+    flex-direction: column;
     color: white;
+    align-items: center;
+    justify-content: start;
+    min-height: 10px;
 }
 
 .page-title {
     font-family: "Inter";
     text-align: center;
-    margin: 20px;
-    padding: 10px;
+    padding: 20px;
     color: #5833A6;
     border-radius: 10px;
 }
 
 .post-card {
-    margin: 60px;
+    width: 50%;
     padding: 20px;
     color: white;
     background-color: rgba(134, 121, 217, 0.2);
@@ -73,3 +77,50 @@ main {
     align-self: center;
 
 }
+
+#nav-main-page {
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: left;
+    text-decoration: none;
+    padding: .5rem;
+    a {
+        color: #f2f2f2;
+        text-decoration: none;
+    }
+}
+
+.nav-item:first-child{
+    margin-left: 1rem;
+}
+
+.nav-item:hover {
+    background-color: white;
+    a {
+        color: black;
+
+    }
+    
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.sticky + main {
+    padding-top: 60px;
+}
+  

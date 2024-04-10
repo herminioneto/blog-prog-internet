@@ -1,5 +1,4 @@
-{% load static %}
-<link rel="stylesheet" href="{% static "blog/styles/styles.css" %}">
+{% extends "blog/base.html" %}
 {% block content %}
   <header>
     <h1 class="page-title">{{ post.title }}</h1>
@@ -11,5 +10,4 @@
     </article>
     <a href="{% url "delete_post" pk=post.id %}">Apagar Post</a>
   </main>
-  <p class="post-detail-content">{{ post.content }}</p>
 {% endblock content %}

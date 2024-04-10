@@ -1,11 +1,33 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "blog/styles/styles.css" %}">
     <title>GameLog</title>
   </head>
   <body>
+    <header>
+      <h1 class="page-title">GameLog</h1>
+      <nav id="nav-main-page">
+        <div class="nav-item">
+          <a href="{% url "create_post" %}">Criar Post</a>
+        </div>
+        <div class="nav-item">
+          <a href="#">Teste</a>
+        </div>
+        <div class="nav-item">
+          <a href="#">Teste</a>
+        </div>
+        <div class="nav-item">
+          <a href="#">Teste</a>
+        </div>
+        <div class="nav-item">
+          <a href="#">Teste</a>
+        </div>
+      </nav>
+    </header>
     {% block content %}
     {% endblock content %}
   </body>
