@@ -1,5 +1,4 @@
-{% load static %}
-<link rel="stylesheet" href="{% static "blog/styles/styles.css" %}">
+{% extends "blog/base.html" %}
 {% block content %}
   <main>
     <form method="post" action="{% url "create_post" %}">

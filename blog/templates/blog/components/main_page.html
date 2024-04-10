@@ -1,22 +1,20 @@
+{% extends "blog/base.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static "blog/styles/styles.css" %}">
 {% block content %}
-  <header>
-    <h1 class="page-title">GameLog</h1>
-  </header>
   <main>
     {% if posts %}
       {% for post in posts %}
         <article class="post-card">
           <h2 class="post-title">{{ post.title }}</h2>
           <h3 class="post-time">Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}</h3>
-          <p class="post-content">{{ post.content }}</p>
+          <p class="post-content">{{ post.content|truncatechars:140 }}</p>
           <a href=" {% url "post_detail" pk=post.id %}">Ver detalhes</a>
         </article>
       {% endfor %}
     {% else %}
       <p>Nenhum post publicado ainda! Se sinta a vontade para publicar</p>
+      <a href=" {% url "create_post" %}">Criar novo post</a>
     {% endif %}
-    <a href=" {% url "create_post" %}">Criar novo post</a>
   </main>
+  <script src="{% static "blog/scripts/stikyNavBar.js" %}"></script>
 {% endblock content %}
