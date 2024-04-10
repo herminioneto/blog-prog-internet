@@ -8,11 +8,12 @@
           <h2 class="post-title">{{ post.title }}</h2>
           <h3 class="post-time">Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}</h3>
           <p class="post-content">{{ post.content|truncatechars:140 }}</p>
-          <a href=" {% url "post_detail" pk=post.id %}">Ver detalhes</a>
+          <button class="post-see-details" onclick="goToPostDetail()">Ver detalhes</button>
+          <script>function goToPostDetail(){ window.location.href="{% url "post_detail" pk=post.id %}"}</script>
         </article>
       {% endfor %}
     {% else %}
-      <p>Nenhum post publicado ainda! Se sinta a vontade para publicar</p>
+      <p>Nenhum post publicado ainda! Sinta-se a vontade para publicar</p>
       <a href=" {% url "create_post" %}">Criar novo post</a>
     {% endif %}
   </main>

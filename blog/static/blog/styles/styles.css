@@ -14,9 +14,10 @@ header {
 body {
     font-family: "Inter";
     height: 100vh;
-    background: linear-gradient(180deg, rgba(14,14,66,1) 29%, rgba(55,24,113,1) 66%);
+    background: var(--main-color);
     background-attachment: fixed;
 }
+
 
 main {
     display: flex;
@@ -24,7 +25,7 @@ main {
     height: calc(100vh - 30px);
     gap: 10px;
     flex-direction: column;
-    color: white;
+    color: #e6d4be;
     align-items: center;
     justify-content: start;
     min-height: 10px;
@@ -47,25 +48,41 @@ a:hover{
     font-family: "Pixelify Sans";
     text-align: center;
     padding: 20px;
-    color: #5833A6;
+    color: var(--sec-color);
     border-radius: 10px;
     font-size: 4.5rem;
 }
 
 .post-card {
+    display: flex;
     width: 50%;
+    flex-direction: column;
     padding: 20px;
-    color: white;
-    background-color: rgba(134, 121, 217, 0.2);
+    color: var(--main-color);
+    background-color: var(--sec-color);
     border-radius: 10px;
 }
 
 .post-title {
     margin-bottom: 20px;
 }
+
+.post-see-details {
+    /* resetando atributos que já vem do botão: */
+    border: none;
+    text-decoration: none;
+    padding: .5rem;
+    align-self: flex-end;
+    justify-self: right;
+    background-color: var(--main-color);
+    color: var(--sec-color);
+}
+
+
 .post-details-title {
+    font-family: "Pixelify Sans";
     text-align: center;
-    color: white;
+    color: var(--sec-color);
 }
 
 .post-time {
@@ -83,14 +100,15 @@ a:hover{
     justify-content: top;
     width: 60%;
     flex-direction: column;
-    height: max-content;
     padding: 20px;
-    color: white;
-    background-color: rgba(134, 121, 217, 0.2);
+    color: var(--main-color);
+    background-color: var(--sec-color);
     border-radius: 10px;
     text-align: justify;
-    text-justify: distribute-all-lines;
+    text-justify: auto;
     line-height: 1.5rem;
+
+    min-height: 100%;
 
     h3 {
         margin-bottom: 1rem;
@@ -108,11 +126,18 @@ a:hover{
 
 #nav-main-page {
     display: flex;
-    gap: 10px;
+    width: 80%;
     height: 50px;
-    color: white;
-    background-color: black;
+    color: var(--main-color);
+    background-color: var(--sec-color);
     align-items: center;
+    transition: 1s;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .nav-item {
@@ -121,30 +146,30 @@ a:hover{
     height: 100%;
     float: left;
     text-decoration: none;
-    padding: .5rem;
+    padding: 1rem;
     a {
-        color: #f2f2f2;
+        color: var(--main-color);
         text-decoration: none;
     }
 }
 
 .nav-item:first-child{
-    margin-left: 1rem;
+    padding-left: 1rem;
 }
 
 .nav-item:hover {
-    background-color: white;
+    background-color: var(--main-color);
     a {
-        color: black;
-
+        color: var(--sec-color);
     }
     
 }
 
 .sticky {
+    width: 100% !important;
+    border-bottom: solid 1rem var(--main-color);
     position: fixed;
     top: 0;
-    width: 100%;
 }
 
 
@@ -174,18 +199,29 @@ form {
     }
 
     input[type="text"]{
+        background-color: #e6d4be;
+        color: #352b30;
         border: none;
         border-radius: 25px;
-        height: 20px;
-        width: 40%;
+        height: 30px;
+        width: 50%;
+        padding: 1rem;
     }
 
-
+    textarea{
+        background-color: #e6d4be;
+        color: #352b30;
+        width: 50%;
+        height: 200px;
+    }
 }
 
-#input-content {
-    display: block;
-    text-align: start;
-    height: 100px;
-    line-height: 100px;
+
+:root {
+    --sec-color: #e6d4be;
+    --main-color: #352b30;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
