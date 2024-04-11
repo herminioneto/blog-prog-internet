@@ -51,12 +51,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django.middleware.cache.CacheControlMiddleware",
 ]
-
-# Configuração para desativar o cache para os arquivos estáticos
-# Defina um cache control de 0 segundos para garantir que os arquivos estáticos não sejam armazenados em cache pelos navegadores.
-CACHE_MIDDLEWARE_SECONDS = 0
 
 
 ROOT_URLCONF = "config.urls"
