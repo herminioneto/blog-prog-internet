@@ -61,6 +61,7 @@ a:hover{
     color: var(--main-color);
     background-color: var(--sec-color);
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .post-title {
@@ -70,12 +71,18 @@ a:hover{
 .post-see-details {
     /* resetando atributos que já vem do botão: */
     border: none;
+    border-radius: 5px;
     text-decoration: none;
     padding: .5rem;
     align-self: flex-end;
     justify-self: right;
     background-color: var(--main-color);
     color: var(--sec-color);
+    cursor: pointer;
+}
+
+.post-see-details:hover {
+    background-color: var(--main-color-hover);
 }
 
 
@@ -220,6 +227,7 @@ form {
 :root {
     --sec-color: #e6d4be;
     --main-color: #352b30;
+    --main-color-hover: #4e464a
 }
 
 ::-webkit-scrollbar {
