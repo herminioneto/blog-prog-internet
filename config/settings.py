@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-#r_ht2f(cjvsj&g%mi_6k56oirb8+21%)$5^!po8=##pb3hpga
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ryofac2.pythonanywhere.com"]
+ALLOWED_HOSTS = ['herminioneto.pythonanywhere.com']
+
 
 
 MY_APPS = ["blog"]
