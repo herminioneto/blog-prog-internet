@@ -22,8 +22,8 @@ body {
 main {
     display: flex;
     width: 100%;
-    height: calc(100vh - 30px);
-    gap: 10px;
+    height: 100%;
+    gap: 30px;
     flex-direction: column;
     color: #e6d4be;
     align-items: center;
@@ -51,6 +51,12 @@ a:hover{
     color: var(--sec-color);
     border-radius: 10px;
     font-size: 4.5rem;
+
+    a {
+        cursor: pointer; 
+        text-decoration: none;
+        color: #e6d4be;
+    }
 }
 
 .post-card {
@@ -61,7 +67,6 @@ a:hover{
     color: var(--main-color);
     background-color: var(--sec-color);
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 .post-title {
@@ -165,11 +170,11 @@ a:hover{
 }
 
 .nav-item:hover {
+    cursor: pointer;
     background-color: var(--main-color);
     a {
         color: var(--sec-color);
     }
-    
 }
 
 .sticky {
