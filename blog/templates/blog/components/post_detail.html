@@ -2,11 +2,21 @@
 {% load static %}
 {% block content %}
   <h1 class="post-details-title">{{ post.title }}</h1>
-  <main>
-    <article class="post-details-card">
-      <h3 class="post-details-time">Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}</h3>
-      <p class="post-content">{{ post.content|safe }}</p>
-    </article>
-    <a href="{% url "delete_post" pk=post.id %}">Apagar Post</a>
-  </main>
+  {% if post.image %}
+    <div id="img-container">
+      <img class="post-image-details"
+           src="{% static post.image.url %}"
+           width="keep"
+           height="keep"
+           alt="Imagem do Post {{ post.title }}">
+    </img>
+  </div>
+{% endif %}
+<main>
+  <article class="post-details-card">
+    <h3 class="post-details-time">Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}</h3>
+    <p class="post-content">{{ post.content|safe }}</p>
+  </article>
+  <a href="{% url "delete_post" pk=post.id %}">Apagar Post</a>
+</main>
 {% endblock content %}

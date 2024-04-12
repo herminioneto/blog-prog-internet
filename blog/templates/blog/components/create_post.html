@@ -2,15 +2,19 @@
 {% load static %}
 {% block content %}
   <main>
-    <form method="post" action="{% url "create_post" %}">
+    <form method="post"
+          action="{% url "create_post" %}"
+          enctype="multipart/form-data">
       {% csrf_token %}
+      <h3 class="page-title">Cadastrar novo post</h3>
       <fieldset id="create-post-fieldset">
-        <legend>Cadastrar novo post</legend>
+        <label for="input-file">Cover do Post</label>
+        <input id="input-file" class="submit-button" type="file"  name="image" />
         <label>Título do Post</label>
         <input id="input-title" type="text" name="title" />
         <label>Conteúdo do Post</label>
         <textarea id="input-content" name="content"> </textarea>
-        <button type="submit">Criar</button>
+        <button class="submit-button" type="submit">Criar</button>
       </fieldset>
     </form>
   </main>

@@ -1,8 +1,11 @@
+from email.mime import image
+
 from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
 from blog.models import Post
+from config import settings
 
 
 # showing all posts
@@ -23,7 +26,9 @@ def post_detail(request, pk):
 def delete_post(request, pk):
     print("Deletando post")
     try:
-        Post.objects.filter(id=pk).delete()
+        toBeDeleted = Post.objects.filter(id=pk).first()
+        toBeDeleted.image.delete()
+        toBeDeleted.delete()
     except Post.DoesNotExist:
         return Http404("Post with this id doesnt exits!")
     return redirect(reverse("main_page"))
@@ -33,6 +38,13 @@ def create_post(request):
     if request.method != "POST":
         return render(request, "blog/components/create_post.html")
     data = request.POST
+
     # Criando um novo post
-    Post.objects.create(title=data["title"], content=data["content"])
+    cover_image = request.FILES.get("image")
+    post = Post(
+        title=data["title"],
+        content=data["content"],
+        image=cover_image,
+    )
+    post.save()
     return redirect(reverse("main_page"))
