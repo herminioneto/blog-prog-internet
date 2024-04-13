@@ -22,7 +22,7 @@
     {% endfor %}
   {% else %}
     <p>Nenhum post publicado ainda! Sinta-se a vontade para publicar</p>
-    <a href=" {% url "create_post" %}">Criar novo post</a>
+    <a class="submit-button" href=" {% url "create_post" %}">Criar novo post</a>
   {% endif %}
 </main>
 {% endblock content %}
