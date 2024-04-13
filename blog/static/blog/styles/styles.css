@@ -231,18 +231,25 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin-top: 20px;
     width: 80%;
     gap: 20px;
     border: none;
+    border-radius: 1rem;
+    background-color: #e6d4be;
+    width: 50%;
 
     label {
+        font-size: 1.5rem;
+        font-family: "Pixelify Sans";
         align-self: center;
+        color: #352b30;
     }
 
     input[type="text"]{
         font-family: monospace;
-        background-color: #e6d4be;
-        color: #352b30;
+        background-color: var(--main-color);
+        color: var(--sec-color);
         border: none;
         border-radius: .5rem;
         height: 30px;
@@ -252,8 +259,8 @@ form {
 
     textarea{
         padding: 10px;
-        background-color: #e6d4be;
-        color: #352b30;
+        background-color: var(--main-color);
+        color: var(--sec-color);
         width: 50%;
         height: 200px;
         border-radius: .5rem;
@@ -290,8 +297,7 @@ form {
 }
 
 .submit-button:hover{
-    color: var(--main-color);
-    background-color: var(--sec-color); 
+    background-color: var(--main-color-hover);
 
     button {
         text-decoration: none;

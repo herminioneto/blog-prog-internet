@@ -6,13 +6,13 @@
           action="{% url "create_post" %}"
           enctype="multipart/form-data">
       {% csrf_token %}
-      <h3 class="page-title">Cadastrar novo post</h3>
+      <h1 class="post-details-title">Cadastrar novo post</h1>
       <fieldset id="create-post-fieldset">
-        <label for="input-file">Cover do Post</label>
-        <input id="input-file" class="submit-button" type="file"  name="image" />
-        <label>Título do Post</label>
+        <label for="input-file">Imagem de Cover</label>
+        <input id="input-file" class="submit-button" type="file" name="image" />
+        <label>Título</label>
         <input id="input-title" type="text" name="title" />
-        <label>Conteúdo do Post</label>
+        <label>Escreva com sabedoria...</label>
         <textarea id="input-content" name="content"> </textarea>
         <button class="submit-button" type="submit">Criar</button>
       </fieldset>
