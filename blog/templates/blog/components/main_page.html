@@ -8,7 +8,7 @@
         <article class="post-card">
           {% if post.image %}
             <img class="post-image"
-                 src="{% static post.image.url %}"
+                 src="{{ post.image.url }}"
                  width="keep"
                  height="keep"
                  alt="Imagem do Post {{ post.title }}">
