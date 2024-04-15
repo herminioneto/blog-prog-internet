@@ -10,7 +10,7 @@ from config import settings
 
 # showing all posts
 def main_page(request):
-    posts = Post.objects.all()
+    posts = Post.objects.order_by("-created_at").all()
     return render(request, "blog/components/main_page.html", {"posts": posts})
 
 

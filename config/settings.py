@@ -74,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -121,10 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 
-# TODO: Ajeitar essa parte de arquivos estáticos, foi mais trentativa e erro
-STATIC_URL = "blog/static/"
+STATIC_URL = "static/"
 
-STATIC_ROOT = os.path.join(BASE_DIR, "blog/static/")
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 MEDIA_ROOT = "blog/static/"
 

@@ -1,6 +1,7 @@
 {% extends "blog/base.html" %}
 {% load static %}
 {% block content %}
+  <script src="{% static "blog/scripts/changeScreenMode.js" %}"></script>
   <main>
     {% if posts %}
       {% for post in posts %}
