@@ -1,11 +1,8 @@
-from email.mime import image
-
 from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
 from blog.models import Post
-from config import settings
 
 
 # showing all posts
