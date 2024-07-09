@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.db import models
 
 # O ideal seria o author estender de AbstractUser,
@@ -7,6 +7,8 @@ from django.db import models
 
 # Declarando o User como Proxy Model
 # https://docs.djangoproject.com/en/5.0/topics/db/models/#proxy-models
+
+User = get_user_model()
 
 
 class Author(models.Model):
