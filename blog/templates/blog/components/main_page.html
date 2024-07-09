@@ -15,7 +15,9 @@
           </img>
         {% endif %}
         <h2 class="post-title">{{ post.title }}</h2>
-        <h3 class="post-time">Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}</h3>
+        <h3 class="post-time">
+          Por:  {{ post.owner.user.username }}. Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}
+        </h3>
         <p class="post-content">{{ post.content|truncatechars:140 }}</p>
         <button class="post-see-details" onclick="goToPostDetail{{ post.id }}()">Ver detalhes</button>
         <script>function goToPostDetail{{post.id}}(){ window.location.href="{% url "post_detail" pk=post.id %}"}</script>

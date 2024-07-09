@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Pixelify+Sans:wght@400..700&family=Workbench&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -37,12 +38,16 @@ a {
     color: yellow;
 }
 
-a:hover{
+a:hover {
     color: #f2f2f2;
-    text-decoration: underline white 1px ;
+    text-decoration: underline white 1px;
 
 }
-  
+
+p {
+    color: var(--sec-color);
+}
+
 
 .page-title {
     font-family: "Pixelify Sans";
@@ -53,7 +58,7 @@ a:hover{
     font-size: 4.5rem;
 
     a {
-        cursor: pointer; 
+        cursor: pointer;
         text-decoration: none;
         color: #e6d4be;
     }
@@ -101,13 +106,14 @@ a:hover{
     font-size: 1rem;
     margin-bottom: 20px;
 }
+
 .post-author {
     font-size: 1rem;
     margin-bottom: 10px;
 }
 
 .post-image {
-    border: 1rem solid var(--main-color) ;
+    border: 1rem solid var(--main-color);
     border-radius: 5px;
     margin-bottom: 1rem;
     width: 100%;
@@ -124,6 +130,7 @@ a:hover{
     width: 100%;
     padding: 1rem;
 }
+
 .post-image-details {
     border-radius: 5px;
     width: 80%;
@@ -155,12 +162,12 @@ a:hover{
     }
 }
 
-.post-details-card:first-child{
+.post-details-card:first-child {
     margin-top: 2rem;
 
 }
 
-.post-details-time{
+.post-details-time {
     align-self: center;
 }
 
@@ -187,19 +194,21 @@ a:hover{
     float: left;
     text-decoration: none;
     padding: 1rem;
+
     a {
         color: var(--main-color);
         text-decoration: none;
     }
 }
 
-.nav-item:first-child{
+.nav-item:first-child {
     padding-left: 1rem;
 }
 
 .nav-item:hover {
     cursor: pointer;
     background-color: var(--main-color);
+
     a {
         color: var(--sec-color);
     }
@@ -213,7 +222,7 @@ a:hover{
 }
 
 
-.sticky + main {
+.sticky+main {
     padding-top: 60px;
 }
 
@@ -226,7 +235,7 @@ form {
     width: 100%;
 }
 
-#create-post-fieldset{
+#create-post-fieldset {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,7 +255,7 @@ form {
         color: #352b30;
     }
 
-    input[type="text"]{
+    input {
         font-family: monospace;
         background-color: var(--main-color);
         color: var(--sec-color);
@@ -257,7 +266,7 @@ form {
         padding: 1rem;
     }
 
-    textarea{
+    textarea {
         padding: 10px;
         background-color: var(--main-color);
         color: var(--sec-color);
@@ -296,7 +305,7 @@ form {
     visibility: hidden;
 }
 
-.submit-button:hover{
+.submit-button:hover {
     background-color: var(--main-color-hover);
 
     button {

@@ -13,9 +13,12 @@ EditorConfig==0.12.4
 exceptiongroup==1.2.0
 executing==2.0.1
 flake8==7.0.0
+flake8-isort==6.1.1
+Flake8-pyproject==1.2.3
 html-tag-names==0.1.2
 html-void-elements==0.1.0
 ipython==8.23.0
+isort==5.13.2
 jedi==0.19.1
 jsbeautifier==1.15.1
 json5==0.9.24
@@ -28,6 +31,7 @@ packaging==24.0
 parso==0.8.4
 pathspec==0.12.1
 pexpect==4.9.0
+pillow==10.3.0
 platformdirs==4.2.0
 prompt-toolkit==3.0.43
 ptyprocess==0.7.0

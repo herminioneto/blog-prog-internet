@@ -25,6 +25,9 @@ from blog import views
 app_name = "blog"
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("signup/", views.sign_up, name="sign_up"),
+    path("login/", views.login, name="login"),
+    path("logout/", views.logout_view),
     path("", views.main_page, name="main_page"),
     path("post/<pk>/", views.post_detail, name="post_detail"),
     path("post/delete/<pk>/", views.delete_post, name="delete_post"),
