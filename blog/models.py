@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-<<<<<<< HEAD
 # O ideal seria o author estender de AbstractUser,
 # mas isso deve ser feito ao início do app
 
@@ -13,9 +12,6 @@ from django.db import models
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=255)
-=======
-from users.models import User
->>>>>>> origin
 
 
 class Post(models.Model):
@@ -26,7 +22,4 @@ class Post(models.Model):
     edited_at = models.DateTimeField(auto_now=True)
     slug = models.CharField(max_length=15)
     content = models.TextField()
-<<<<<<< HEAD
     owner = models.ForeignKey(Author, on_delete=models.CASCADE)
-=======
->>>>>>> origin
