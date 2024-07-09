@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+  <form method="post" action="{% url "sign_up" %}" enctype="application/json">
+    {% csrf_token %}
+    <h1 class="post-details-title">Cadastre-se</h1>
+    <fieldset>
+      <label>Nome de usuário</label>
+      <p>Digite o seu nome de usuário com até 8 caracteres:</p>
+      <input id="input-title" type="text" name="username" required />
+      <label>Senha</label>
+      <p>Certifique-se de criar uma senha forte!</p>
+      <input id="input-password" type="password" name="password" required />
+      <label>Nome Completo</label>
+      <p>Digite o seu nome completo (Vou comprar uma moto com ele)</p>
+      <input id="input-name" type="text" name="full_name" required />
+      <label>Bio</label>
+      <p>Conte um pouco sobre você:</p>
+      <textarea name="bio" required>  </textarea>
+      <button class="submit-button" type="submit">Cadastre-se</button>
+    </fieldset>
+  </form>
+{% endblock content %}

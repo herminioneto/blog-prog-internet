@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+  <form method="post" action="{% url "login" %}" enctype="application/json">
+    {% csrf_token %}
+    <h1 class="post-details-title">Faça seu login</h1>
+    <p>Não é usuário do blog ainda?</p>
+    <a href="{% url "sign_up" %}">Faça o seu cadastro!</a>
+    <fieldset id="create-post-fieldset">
+      <label>Username</label>
+      <input id="input-title" type="text" name="username" required />
+      <label>Senha</label>
+      <input id="input-title" type="password" name="password" required />
+      <button class="submit-button" type="submit" required>Login</button>
+    </fieldset>
+  </form>
+{% endblock content %}

@@ -21,12 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# flake8: noqa
+
 SECRET_KEY = "django-insecure-#r_ht2f(cjvsj&g%mi_6k56oirb8+21%)$5^!po8=##pb3hpga"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ryofac2.pythonanywhere.com", "herminioneto.pythonanywhere.com", "*"]
+ALLOWED_HOSTS = ["ryofac2.pythonanywhere.com", "*"]
 
 
 MY_APPS = ["blog"]
@@ -55,6 +57,8 @@ MIDDLEWARE = [
 
 
 ROOT_URLCONF = "config.urls"
+
+LOGIN_URL = "/login/"
 
 TEMPLATES = [
     {

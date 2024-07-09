@@ -15,8 +15,11 @@
 <main>
   <article class="post-details-card">
     <h3 class="post-details-time">Publicado em {{ post.created_at|date }} às {{ post.created_at|time }}</h3>
+    <p>Escrito por: {{ post.owner.user.first_name }} {{ post.owner.user.last_name }} ({{ post.owner.user.username }})</p>
     <p class="post-content">{{ post.content|safe }}</p>
-    <a class="submit-button" href="{% url "delete_post" pk=post.id %}">Apagar Post</a>
+    {% if post.owner.user_id == author.user_id %}
+      <a class="submit-button" href="{% url "delete_post" pk=post.id %}">Apagar Post</a>
+    {% endif %}
   </article>
 </main>
 {% endblock content %}

@@ -1,4 +1,4 @@
-#!/home/ryan/Works/Trainings/game-blog-django/venv/bin/python
+#!/home/ryan/Works/ADS/2/prog-internet/blog-prog-internet-django/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
