@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["ryofac2.pythonanywhere.com", "*"]
 
 
-MY_APPS = ["blog"]
+MY_APPS = ["blog", "users"]
 
 # Application definition
 
