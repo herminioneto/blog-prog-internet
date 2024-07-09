@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import django.contrib.auth as auth
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.decorators import login_required
@@ -8,13 +7,6 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 
 from blog.models import Author, Post
-=======
-from django.http import Http404
-from django.shortcuts import redirect, render
-from django.urls import reverse
-
-from blog.models import Post
->>>>>>> origin
 
 
 # showing all posts
