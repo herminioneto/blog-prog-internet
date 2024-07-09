@@ -1,4 +1,5 @@
 import django.contrib.auth as auth
+from django.contrib import messages
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -23,7 +24,6 @@ def main_page(request):
 # Mostrando um post só, com detalhes
 @login_required
 def post_detail(request, pk):
-
     try:
         post = Post.objects.get(id=pk)
     except Post.DoesNotExist:
@@ -97,16 +97,16 @@ def login(request):
     match request.method:
         case "GET":
             return render(request, "blog/components/login.html")
-
         case "POST":
             data = request.POST
             if not data:
                 return HttpResponseBadRequest()
             user = authenticate(username=data["username"], password=data["password"])
             if not user:
+                _msg = "Acesso facial negado! Talvez você ainda precise de permissão no admin!"
+                messages.error(request, _msg)
                 return render(request, "blog/components/login.html")
             auth.login(request, user)
-
             # TODO: Redirecionar para a página de detalhes do autor
             return render(request, "blog/components/main_page.html")
 

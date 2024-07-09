@@ -49,6 +49,10 @@ p {
 }
 
 
+.alert-error {
+    color: red;
+}
+
 .page-title {
     font-family: "Pixelify Sans";
     text-align: center;
